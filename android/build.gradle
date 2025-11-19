@@ -98,6 +98,7 @@ def resolveGodotArtifactVersion(libVersion) {
 }
 
 def artifactVersion = resolveGodotArtifactVersion(libGodotVersion)
+logger.lifecycle("Resolved Godot artifact version: ${artifactVersion} (requested: ${libGodotVersion})")
 
 buildscript {
   ext.safeExtGet = {prop, fallback ->
