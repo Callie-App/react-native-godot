@@ -77,6 +77,28 @@ def getPrebuiltLibraryVersion(libName) {
 def libGodotVersion = getPrebuiltLibraryVersion("libgodot-android")
 def godotCppVersion = getPrebuiltLibraryVersion("libgodot-cpp-android")
 
+def resolveGodotArtifactVersion(libVersion) {
+    def repoDir = file("$projectDir/libs/libgodot-android/${libVersion}/com/migeran/libgodot/godot")
+    if (repoDir.exists()) {
+        def metadataFile = new File(repoDir, "maven-metadata.xml")
+        if (metadataFile.exists()) {
+            try {
+                def metadata = new XmlSlurper().parse(metadataFile)
+                def version = metadata.versioning.latest.text()
+                if (version.endsWith("-SNAPSHOT")) {
+                    return version.replace("-SNAPSHOT", "")
+                }
+                return version
+            } catch (Exception e) {
+                logger.warn("Failed to parse maven-metadata.xml: ${e.message}")
+            }
+        }
+    }
+    return libVersion
+}
+
+def artifactVersion = resolveGodotArtifactVersion(libGodotVersion)
+
 buildscript {
   ext.safeExtGet = {prop, fallback ->
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
@@ -231,7 +253,7 @@ repositories {
 dependencies {
   implementation 'com.facebook.react:react-native'
   implementation project(':react-native-worklets-core')  
-  api "com.migeran.libgodot:godot:${libGodotVersion}-SNAPSHOT"
+  api "com.migeran.libgodot:godot:${artifactVersion}-SNAPSHOT"
 }
 
 task deleteCmakeCache() {
