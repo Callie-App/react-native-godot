@@ -121,9 +121,9 @@
         {
             "name": "libgodot",
             "filename": "libgodot.xcframework.zip",
-            "version": "4.5.1.migeran.2",
-            "base_url": "https://github.com/migeran/libgodot/releases/download/",
-            "shasum": "699fcc7e3eef7d0aee3132c6ebd7a8a9a7b6b0c9da801d220d72950e4ac79958",
+            "version": "4.5.1.callie.1",
+            "base_url": "https://github.com/Callie-App/libgodot/releases/download/",
+            "shasum": "207fd2a5352433d2725db7ab9a38223eef27af3cf90d867168f384a3089c638b",
             "destination_base_dir": "ios/libs",
             "env": "LIBGODOT_XCFRAMEWORK_PATH",
             "no_unpack": "false"
@@ -131,9 +131,9 @@
         {
             "name": "libgodot-cpp",
             "filename": "libgodot-cpp.xcframework.zip",
-            "version": "4.5.1.migeran.2",
-            "base_url": "https://github.com/migeran/libgodot/releases/download/",
-            "shasum": "be0a070d3e34774b83c2fee315271d0f0a32cfb644cc9f36bf002f17a3fc750c",
+            "version": "4.5.1.callie.1",
+            "base_url": "https://github.com/Callie-App/libgodot/releases/download/",
+            "shasum": "1fa54f76f7c10632c792735689abb98794fb1b028a019cef575951bb58c0eb6b",
             "destination_base_dir": "ios/libs",
             "env": "LIBGODOT_CPP_XCFRAMEWORK_PATH",
             "no_unpack": "false"
@@ -141,9 +141,9 @@
         {
             "name": "libgodot-android",
             "filename": "libgodot-android.zip",
-            "version": "4.5.1.migeran.2",
-            "base_url": "https://github.com/migeran/libgodot/releases/download/",
-            "shasum": "5ad2b0d836e6a207ca695e690ed833326e6aba35f43a788bf17c15eb33475783",
+            "version": "4.5.1.callie.1",
+            "base_url": "https://github.com/Callie-App/libgodot/releases/download/",
+            "shasum": "c4b9b670cebeb090ed8353785b3dfc18acc17edd04a1744cf4484ab5f3d85294",
             "destination_base_dir": "android/libs",
             "env": "LIBGODOT_ANDROID_PATH",
             "no_unpack": "false"
@@ -151,9 +151,9 @@
         {
             "name": "libgodot-cpp-android",
             "filename": "godot-cpp-android.zip",
-            "version": "4.5.1.migeran.2",
-            "base_url": "https://github.com/migeran/libgodot/releases/download/",
-            "shasum": "cdf543419a2397dcdcd25d8266f66cf3200cca3dd1b53c161b1b89e819dab21e",
+            "version": "4.5.1.callie.1",
+            "base_url": "https://github.com/Callie-App/libgodot/releases/download/",
+            "shasum": "4fae04d3243f8177f343161ae75f7b65cd9e71228edb1c60b1079e4a57939327",
             "destination_base_dir": "android/libs",
             "env": "LIBGODOT_CPP_ANDROID_PATH",
             "no_unpack": "false"
